@@ -9,11 +9,11 @@ class Neuron:
     self.T = T
     
   def forward(self) -> int:
+    
     """
     Calculates output value of single neuron for defined input,
     weight and treshold value using binary activation function.
     """
-
     weighted_sum = sum(self.input * self.weights)
     return 0 if weighted_sum < self.T else 1
 
@@ -27,21 +27,17 @@ class LogicGate:
     """
     Calculates output value for and gate. 
     """
-    
-    weights = [1, 1]
     n1_val = Neuron(input = self.input,
-                    weights = weights,
+                    weights = [1, 1],
                     T = 2).forward()
     return n1_val
   
-  def or_gate(self) -> int:
+  def or_gate(self) -> int:   
     """
     Calculates output value for or gate. 
-    """
-    
-    weights = [1,1]
+    """   
     n1_val = Neuron(input = self.input,
-                    weights = weights,
+                    weights = [1, 1],
                     T = 1).forward()
     return n1_val
 
@@ -49,11 +45,8 @@ class LogicGate:
     """
     Calculates output value for nor gate. 
     """
-    
-    weights = [1,1] 
-    
     n1_val = Neuron(input = self.input,
-                    weights = weights,
+                    weights = [1, 1],
                     T = 1).forward()
     
     n2_val = Neuron(input = np.array([n1_val]),
@@ -65,7 +58,6 @@ class LogicGate:
     """
     Calculates output value for nand gate.
     """
-
     n1_val = Neuron(input = self.input[0],
                     weights = [-1],
                     T = 0).forward()
