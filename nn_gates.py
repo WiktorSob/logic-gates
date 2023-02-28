@@ -9,7 +9,6 @@ class Neuron:
     self.T = T
     
   def forward(self) -> int:
-    
     """
     Calculates output value of single neuron for defined input,
     weight and treshold value using binary activation function.
