@@ -1,3 +1,4 @@
+## About
 Quick implementation of binary perceptron and four basic logic gates:
 
 * AND gate
@@ -5,6 +6,7 @@ Quick implementation of binary perceptron and four basic logic gates:
 * OR gate
 * NOR gate 
 
+## Class definiton
 ``` Python
 
 class Neuron:
@@ -78,5 +80,8 @@ class LogicGate:
                     T = 1).forward()
     return n3_val
 
-
 ```
+## Possible outcomes - visualization
+![plot](https://user-images.githubusercontent.com/94312553/221930704-9464c003-fdff-46fb-83c2-d26b58ee80d1.jpg)
+
+
